@@ -15,6 +15,8 @@
   --radius-lg: 22px;
   --radius-md: 18px;
   --container: min(1180px, calc(100vw - 32px));
+  --body-size: 17px;
+  --body-size-mobile: 16px;
 }
 
 * {
@@ -28,6 +30,7 @@ html {
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
+  font-size: var(--body-size);
   color: var(--text);
   background:
     linear-gradient(180deg, rgba(245, 166, 35, 0.08), transparent 18%),
@@ -52,7 +55,7 @@ img {
 }
 
 .section {
-  padding: 96px 0;
+  padding: 112px 0;
   position: relative;
 }
 
@@ -65,7 +68,7 @@ img {
   background: rgba(255, 255, 255, 0.7);
   border-radius: 999px;
   color: var(--coral);
-  font-size: 0.84rem;
+  font-size: 0.92rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -83,27 +86,28 @@ img {
 
 .section-head {
   max-width: 720px;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 
 .section-head h2 {
-  margin: 18px 0 14px;
-  font-size: clamp(2rem, 4vw, 3.6rem);
-  line-height: 1.04;
+  margin: 18px 0 16px;
+  font-size: clamp(2.35rem, 4vw, 4.2rem);
+  line-height: 1.02;
   letter-spacing: 0;
 }
 
 .section-head p {
   margin: 0;
   color: var(--muted);
-  font-size: 1.05rem;
+  font-size: 1.16rem;
+  line-height: 1.75;
 }
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 40;
-  padding: 18px 0;
+  padding: 20px 0;
   backdrop-filter: blur(20px);
   background: rgba(247, 247, 247, 0.72);
   border-bottom: 1px solid rgba(21, 21, 38, 0.06);
@@ -163,21 +167,22 @@ img {
 
 .brand-text strong {
   display: block;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .brand-text span {
   display: block;
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.96rem;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 28px;
   color: var(--muted);
   font-weight: 600;
+  font-size: 1rem;
 }
 
 .nav-links a:hover {
@@ -190,12 +195,12 @@ img {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  min-height: 52px;
-  padding: 0 22px;
+  min-height: 56px;
+  padding: 0 24px;
   border-radius: 999px;
   border: 1px solid transparent;
   font-weight: 700;
-  font-size: 0.98rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease, background 220ms ease, color 220ms ease;
   overflow: hidden;
@@ -241,35 +246,36 @@ img {
 }
 
 .hero {
-  padding: 48px 0 84px;
+  padding: 64px 0 96px;
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.06fr) minmax(360px, 0.94fr);
-  gap: 36px;
+  gap: 44px;
   align-items: center;
 }
 
 .hero-copy h1 {
-  margin: 18px 0 18px;
-  font-size: clamp(3rem, 6vw, 5.6rem);
-  line-height: 0.95;
+  margin: 18px 0 22px;
+  font-size: clamp(3.4rem, 6vw, 6.2rem);
+  line-height: 0.92;
   letter-spacing: 0;
 }
 
 .hero-copy p {
   max-width: 640px;
-  margin: 0 0 30px;
+  margin: 0 0 34px;
   color: var(--muted);
-  font-size: 1.12rem;
+  font-size: 1.22rem;
+  line-height: 1.8;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  margin-bottom: 28px;
+  gap: 16px;
+  margin-bottom: 34px;
 }
 
 .hero-metrics {
@@ -288,19 +294,20 @@ img {
 }
 
 .metric-card {
-  padding: 18px;
+  padding: 22px;
 }
 
 .metric-card strong {
   display: block;
-  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
   line-height: 1;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .metric-card span {
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .hero-visual-wrap {
@@ -380,7 +387,7 @@ img {
   border-radius: 999px;
   background: rgba(26, 26, 46, 0.92);
   color: #fff;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
@@ -396,7 +403,7 @@ img {
 .vehicle-card {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.92));
   border-radius: 26px;
-  padding: 26px;
+  padding: 30px;
   border: 1px solid rgba(255, 255, 255, 0.7);
   box-shadow: 0 30px 80px rgba(26, 26, 46, 0.12);
 }
@@ -645,7 +652,7 @@ img {
 
 .stat-chip,
 .route-mini {
-  padding: 16px 18px;
+  padding: 18px 20px;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(21, 21, 38, 0.06);
@@ -654,14 +661,15 @@ img {
 .stat-chip strong,
 .route-mini strong {
   display: block;
-  font-size: 1rem;
-  margin-bottom: 6px;
+  font-size: 1.08rem;
+  margin-bottom: 8px;
 }
 
 .stat-chip span,
 .route-mini span {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.98rem;
+  line-height: 1.65;
 }
 
 .floating-note {
@@ -676,14 +684,15 @@ img {
 
 .floating-note strong {
   display: block;
-  font-size: 0.98rem;
-  margin-bottom: 8px;
+  font-size: 1.06rem;
+  margin-bottom: 10px;
 }
 
 .floating-note p {
   margin: 0;
   color: rgba(255, 255, 255, 0.72);
-  font-size: 0.88rem;
+  font-size: 0.98rem;
+  line-height: 1.7;
 }
 
 .grid-3,
@@ -704,7 +713,7 @@ img {
 .testimonial-card,
 .faq-item,
 .logo-stat {
-  padding: 28px;
+  padding: 32px;
   transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
@@ -733,9 +742,9 @@ img {
 .pricing-card h3,
 .testimonial-card h3,
 .faq-item h3 {
-  margin: 0 0 10px;
-  font-size: 1.24rem;
-  line-height: 1.2;
+  margin: 0 0 12px;
+  font-size: 1.42rem;
+  line-height: 1.22;
 }
 
 .feature-card p,
@@ -744,6 +753,8 @@ img {
 .faq-item p {
   margin: 0;
   color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
 }
 
 .feature-list,
@@ -752,8 +763,10 @@ img {
   margin: 18px 0 0;
   padding: 0;
   display: grid;
-  gap: 10px;
+  gap: 12px;
   color: var(--text);
+  font-size: 0.98rem;
+  line-height: 1.65;
 }
 
 .feature-list li,
@@ -780,20 +793,22 @@ img {
 .highlight-panel {
   background: linear-gradient(180deg, var(--navy), #11111d);
   color: #fff;
-  padding: 34px;
+  padding: 38px;
   border-radius: var(--radius-xl);
   box-shadow: 0 28px 80px rgba(26, 26, 46, 0.20);
 }
 
 .highlight-panel h3 {
-  margin: 0 0 14px;
-  font-size: 1.8rem;
+  margin: 0 0 16px;
+  font-size: 2rem;
   line-height: 1.1;
 }
 
 .highlight-panel p {
   margin: 0;
   color: rgba(255, 255, 255, 0.74);
+  font-size: 1.02rem;
+  line-height: 1.75;
 }
 
 .highlight-metric {
@@ -812,7 +827,7 @@ img {
 
 .highlight-metric strong {
   display: block;
-  font-size: 1.4rem;
+  font-size: 1.55rem;
   margin-bottom: 6px;
 }
 
@@ -832,6 +847,7 @@ img {
   margin-top: 18px;
   color: var(--text);
   font-weight: 700;
+  font-size: 1rem;
 }
 
 .testimonial-meta span {
@@ -864,7 +880,7 @@ img {
 
 .logo-stat strong {
   display: block;
-  font-size: clamp(1.7rem, 4vw, 2.8rem);
+  font-size: clamp(2rem, 4vw, 3.2rem);
   line-height: 1;
   margin-bottom: 10px;
   color: var(--gold);
@@ -872,6 +888,8 @@ img {
 
 .logo-stat span {
   color: rgba(255, 255, 255, 0.72);
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .pricing-shell {
@@ -882,7 +900,7 @@ img {
 }
 
 .pricing-note {
-  padding: 32px;
+  padding: 38px;
   border-radius: var(--radius-xl);
   background: linear-gradient(160deg, rgba(233, 69, 96, 0.95), rgba(245, 166, 35, 0.92));
   color: #fff;
@@ -890,14 +908,16 @@ img {
 }
 
 .pricing-note h3 {
-  margin: 0 0 14px;
-  font-size: 1.8rem;
+  margin: 0 0 16px;
+  font-size: 2rem;
   line-height: 1.08;
 }
 
 .pricing-note p {
   margin: 0 0 24px;
   color: rgba(255, 255, 255, 0.82);
+  font-size: 1.02rem;
+  line-height: 1.75;
 }
 
 .pricing-badge {
@@ -908,6 +928,7 @@ img {
   border-radius: 999px;
   background: rgba(26, 26, 46, 0.2);
   font-weight: 700;
+  font-size: 0.98rem;
 }
 
 .grid-pricing {
@@ -934,7 +955,7 @@ img {
 
 .price {
   margin: 0 0 8px;
-  font-size: 2.2rem;
+  font-size: 2.55rem;
   line-height: 1;
 }
 
@@ -952,12 +973,14 @@ img {
 }
 
 .faq-side {
-  padding: 28px;
+  padding: 34px;
 }
 
 .faq-side p {
   margin: 0 0 18px;
   color: var(--muted);
+  font-size: 1.04rem;
+  line-height: 1.75;
 }
 
 .grid-faq {
@@ -965,7 +988,7 @@ img {
 }
 
 .cta-band {
-  padding: 54px;
+  padding: 60px;
   border-radius: 34px;
   background:
     linear-gradient(140deg, rgba(26, 26, 46, 0.98), rgba(45, 45, 68, 0.95)),
@@ -980,7 +1003,7 @@ img {
 
 .cta-band h2 {
   margin: 0 0 12px;
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(2.35rem, 4vw, 3.6rem);
   line-height: 1;
 }
 
@@ -988,6 +1011,8 @@ img {
   margin: 0;
   color: rgba(255, 255, 255, 0.72);
   max-width: 650px;
+  font-size: 1.08rem;
+  line-height: 1.8;
 }
 
 .site-footer {
@@ -1009,14 +1034,15 @@ img {
   display: block;
   margin-bottom: 10px;
   color: var(--text);
-  font-size: 1.05rem;
+  font-size: 1.18rem;
 }
 
 .footer-brand p {
   max-width: 420px;
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--muted);
+  line-height: 1.7;
 }
 
 .footer-nav,
@@ -1031,13 +1057,13 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  min-height: 40px;
-  padding: 0 14px;
+  min-height: 44px;
+  padding: 0 16px;
   border-radius: 999px;
   border: 1px solid rgba(21, 21, 38, 0.08);
   background: rgba(255, 255, 255, 0.68);
   color: var(--text);
-  font-size: 0.92rem;
+  font-size: 0.96rem;
   font-weight: 600;
   transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
@@ -1072,7 +1098,7 @@ img {
   gap: 16px;
   padding-top: 18px;
   border-top: 1px solid rgba(21, 21, 38, 0.08);
-  font-size: 0.9rem;
+  font-size: 0.96rem;
 }
 
 .fade-up {
@@ -1126,8 +1152,12 @@ img {
 }
 
 @media (max-width: 760px) {
+  body {
+    font-size: var(--body-size-mobile);
+  }
+
   .section {
-    padding: 72px 0;
+    padding: 84px 0;
   }
 
   .site-header {
@@ -1142,11 +1172,11 @@ img {
     width: 100%;
     justify-content: space-between;
     gap: 14px;
-    font-size: 0.92rem;
+    font-size: 0.98rem;
   }
 
   .hero {
-    padding-top: 28px;
+    padding-top: 36px;
   }
 
   .hero-metrics,
@@ -1166,6 +1196,27 @@ img {
 
   .hero-visual {
     padding: 18px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.6rem, 10vw, 3.6rem);
+    line-height: 0.96;
+  }
+
+  .hero-copy p,
+  .section-head p,
+  .feature-card p,
+  .pricing-card p,
+  .testimonial-card p,
+  .faq-item p,
+  .faq-side p,
+  .cta-band p {
+    font-size: 1rem;
+    line-height: 1.72;
+  }
+
+  .section-head h2 {
+    font-size: clamp(2rem, 8vw, 2.8rem);
   }
 
   .visual-topbar {
@@ -1300,7 +1351,7 @@ img {
   .cta-band,
   .highlight-panel,
   .pricing-note {
-    padding: 22px;
+    padding: 24px;
   }
 
   .floating-note {
